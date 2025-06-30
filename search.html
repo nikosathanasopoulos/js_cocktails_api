@@ -21,9 +21,25 @@
     </nav>
   </header>
   <nav>
-    <p class="welcome">Home Page</p>
-    <p class="homepage">One random cocktail for the day</p>
-    <div id="homepage"></div>
+    <p class="welcome">Provide the ingredient of the Cocktail</p>
+    <form class="input__cocktail">
+      <input
+              type="text"
+              placeholder="Ingredient"
+              class="cocktail__name__input"
+      />
+      <button class="input__btn">&rarr;</button>
+    </form>
   </nav>
+  <main class="container">
+    <div class="cocktail-list">
+      <div class="cocktails">
+        <!-- Dynamically rendered cocktails go here -->
+      </div>
+    </div>
+    <div id="result" class="cocktail-result">
+      <!-- Detailed drink info goes here -->
+    </div>
+  </main>
   </body>
 </html>
