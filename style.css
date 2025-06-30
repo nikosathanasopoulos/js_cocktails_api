@@ -118,3 +118,12 @@ body {
 .hidden {
   display: none;
 }
+
+#homepage,.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; /* optional, for stacked children */
+  margin: 0 auto;
+}

@@ -20,11 +20,12 @@ const renderCocktail = function(data, className = ''){
     const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${data.idDrink}`;
     const html = `
            <article class="cocktail ${className}">
+           <a href="#" id="cocktail-link">
           <img class="cocktail__img" src="${data.strDrinkThumb}" />
           <div class="cocktail__data">
             <h3 class="cocktail__name hidden">${data.idDrink}</h3>
             <h2 class="cocktail__region">${data.strDrink}</h2>
-            <a href="#" id="cocktail-link">${data.strDrink}</a>
+             </a>
             <div id="result"></div>
           </div>
         </article>
