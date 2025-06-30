@@ -115,22 +115,24 @@ if (btnInputName) {
     });
 }
 
+if (cocktailsContainer) {
 
-cocktailsContainer.addEventListener('click', function(e) {
-    const link = e.target.closest('#cocktail-link');
-    if (!link) return;
+    cocktailsContainer.addEventListener('click', function(e) {
+        const link = e.target.closest('#cocktail-link');
+        if (!link) return;
 
-    e.preventDefault();
+        e.preventDefault();
 
-    const id = link
-          .closest('.cocktail')
-          .querySelector('.cocktail__name')
-          .textContent
-          .trim();
+        const id = link
+              .closest('.cocktail')
+              .querySelector('.cocktail__name')
+              .textContent
+              .trim();
 
-    console.log('Clicked ID:', id);
-    getCocktail(id);
-});
+        console.log('Clicked ID:', id);
+        getCocktail(id);
+    });
+}
 
 const getCocktail = async function(id){
 
@@ -166,6 +168,16 @@ const getCocktail = async function(id){
 
     }catch(err){alert(err)}
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded');
+    fetch('header.html')
+          .then(res => res.text())
+          .then(html => {
+              document.getElementById('header-placeholder').innerHTML = html;
+          });
+});
+
 
 
 
